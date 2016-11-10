@@ -22,12 +22,23 @@
                 <param name="ios-package" value="Diagnostic" />
             </feature>
         </config-file>
+
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>This app requires constant access to your location in order to track your position, even when the screen is off.</string>
         </config-file>
+
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>This app will now only track your location when the screen is on and the app is displayed.</string>
         </config-file>
+
+        <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
+            <string>Nous utilisons le bluetooth en vue d'améliorer la mise en relation, et dans le but de réaliser des diagnostics, et améliorer la précision de la position.</string>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>Nous utilisons le microphone en vue d'améliorer la mise en relation, et dans le but de réaliser des diagnostics et améliorer la précision de la position.</string>
+        </config-file>
+
 
         <js-module src="www/ios/diagnostic.js" name="Diagnostic">
             <clobbers target="cordova.plugins.diagnostic" />
